@@ -1,0 +1,234 @@
+/* Main container for salary form */
+.salary-form {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: #000;
+    padding: 20px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: normal;
+    position: relative; /* Enable positioning for child elements */
+}
+
+/* Flexbox layout for two columns */
+.form-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Employer info box */
+.employer-info-box {
+    position: absolute;
+    top: 20px; /* Position from the top of the container */
+    right: 20px; /* Position from the right of the container */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 345px; /* Fixed width for the box */
+}
+
+.download-button {
+    margin-left: 16px; /* Add space between the button and the box */
+    background-color: #4CAF50; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.download-button:hover {
+    background-color: #45a049; /* Hover color */
+}
+
+.download-button i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.employer-info-box p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Salary section (quarter width) */
+.salary-column {
+    width: 20%;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+/* Salary paycheck section */
+.salary-paycheck {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.salary-detail p {
+    margin: 5px 0;
+}
+
+/* Reporting section (three-quarters width) */
+.reporting-column {
+    width: 75%;
+}
+
+/* Month and year selector */
+.month-year-selector {
+    margin-bottom: 20px;
+
+}
+
+.month-year-selector select,
+.month-year-selector input {
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Reporting section */
+
+.saturday-cell {
+    background-color: #8985FD;
+    color: white; /* Ensures text is visible on the blue background */
+}
+
+.reporting-section {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .salary-column {
+        width: 40%;
+    }
+    .reporting-column {
+        width: 55%;
+    }
+
+    .employer-info-box {
+        position: static;
+        margin-bottom: 20px; /* Place it above the form layout */
+        width: auto;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    .comments-section textarea {
+        direction: rtl; /* Ensures text direction is right-to-left */
+        text-align: right; /* Aligns the text to the right */
+        resize: none;
+        width: 95%; /* Adjust to fit your layout */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+}
+.transfer-to-bank {
+    margin-bottom: 12px;
+    text-underline: #4CAF50;
+}
+
+.salary-explained {
+    margin-top: 16px;
+}
+
+.salary-detail {
+    margin-bottom: 10px;
+}
+/* Lock Button Container */
+.lock-button-container {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+/* Lock Button Style */
+.lock-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lock-button:hover {
+    background-color: #c9302c;
+}
+
+/* Confirmation Dialog */
+.confirmation-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.confirmation-dialog p {
+    margin-bottom: 20px;
+}
+
+.confirmation-dialog .cancel-button,
+.confirmation-dialog .confirm-lock-button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirmation-dialog .cancel-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.confirmation-dialog .confirm-lock-button {
+    background-color: #d9534f;
+    color: white;
+}
